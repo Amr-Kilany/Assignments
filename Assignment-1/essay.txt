@@ -1,0 +1,74 @@
+ B. Part 2: Essay Questions:
+
+ 1) What is the difference between forEach and for...of? When would you use each?
+
+ forEach vs for...of
+
+  forEach: It is a method available on Arrays. It takes a callback function and executes it for every element. It cannot be stopped using break or continue.
+
+  for...of: It is a loop statement that works on any iterable object (Arrays, Strings, Maps, Sets). It supports control flow statements like break, continue, and await.
+
+ When to use:
+
+  Use forEach when you want a clean, functional approach to execute side effects on every item in an array.
+
+  Use for...of when you need to exit the loop early (break) or if you are working with async/await inside the loop.
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ 2) What is hoisting and what is the Temporal Dead Zone (TDZ)? Explain with examples.
+
+ Hoisting: This is JavaScript's default behavior of moving variable and function declarations to the top of their scope before code execution.
+
+ Example: You can call a function before it is defined in your code.
+
+ Temporal Dead Zone (TDZ): This is the period between entering the scope and the actual variable declaration where the variable is "uninitialized." If you try to access let or const variables during this time, you get a ReferenceError.
+
+ JavaScript
+ // Hoisting example
+ console.log(myVar); // undefined (var is hoisted and initialized)
+ var myVar = 10;
+
+ console.log(myLet); // ReferenceError (Temporal Dead Zone)
+ let myLet = 20; 
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+3) What are the main differences between == and ===?
+
+== (Loose Equality): Performs type coercion before comparing. It converts the operands to the same type, which often leads to unexpected results (5 == "5" is true).
+
+=== (Strict Equality): Does not perform type coercion. It checks both the value and the type. If the types are different, it returns false (5 === "5" is false).
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+4) Explain how try-catch works and why it is important in async operations.
+
+How it works: A try block wraps code that might throw an error. If an error occurs, control shifts to the catch block, where the error object is captured, preventing the entire application from crashing.
+
+Importance in Async: In asynchronous operations (like fetching data from an API), errors often happen outside the standard execution flow (e.g., server downtime). Without try-catch (or .catch() in promises), an unhandled rejection can leave your application in a broken state.
+
+JavaScript
+async function fetchData() {
+  try {
+    const response = await fetch('https://api.example.com');
+    const data = await response.json();
+  } catch (error) {
+    console.error("Fetch failed:", error); // Handles connection errors gracefully
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+5) What’s the difference between type conversion and coercion? Provide examples of each.
+
+Type Conversion (Explicit): You manually change the type of a variable using built-in functions.
+
+Example: let num = Number("123"); (You explicitly told JS to treat the string as a number).
+
+Type Coercion (Implicit): JavaScript automatically changes the type for you behind the scenes when you use operators on different types.
+
+Example: let result = "5" - 1; (JS converts the string "5" to a number automatically so it can perform the subtraction)
+
+
+
