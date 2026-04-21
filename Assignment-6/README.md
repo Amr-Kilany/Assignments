@@ -1,0 +1,1 @@
+![phpMyAdmin-screenshot](image.png)

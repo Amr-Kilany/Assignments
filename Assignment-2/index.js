@@ -2,6 +2,10 @@ import path from 'path';
 import fs from 'fs';
 // 1) Write a function that logs the current file path and directory.
 
+const x = fs()
+
+console.log()
+
 function logPaths() {
   const __filename = path.resolve();
   const __dirname = path.dirname(__filename);
