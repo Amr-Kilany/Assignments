@@ -1,0 +1,1748 @@
+{
+  "info": {
+    "_postman_id": "c3379b81-2ea9-4e19-bdaa-05f4907d3411",
+    "name": "Assignment-9-route",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53487454",
+    "_collection_link": "https://go.postman.co/collection/53487454-c3379b81-2ea9-4e19-bdaa-05f4907d3411?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "signup-user",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "[\r\n    {\r\n        \"name\":\"Ahmed\",\r\n        \"email\":\"Ahmed@test.com\",\r\n        \"password\":\"123456789\",\r\n        \"phone\":\"11111111112\",\r\n        \"age\":\"24\" \r\n    },\r\n    {\r\n        \"name\":\"omar\",\r\n        \"email\":\"omar@test.com\",\r\n        \"password\":\"12345678\",\r\n        \"phone\":\"11111111110\",\r\n        \"age\":\"23\" \r\n    }\r\n]\r\n\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/users/signup",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "users",
+                "signup"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "signup-user",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\":\"Amr\",\r\n    \"email\":\"amr@test.com\",\r\n    \"password\":\"123456\",\r\n    \"phone\":\"11111111111\",\r\n    \"age\":\"22\"\r\n\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/users/signup",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "users",
+                    "signup"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "38"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"26-WUDbGPKaKue9DH5o0A2jPP4/YHA\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 04 Jun 2026 10:00:08 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"User added successfully.\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "login-user",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"Ahmed@test.com\",\r\n    \"password\":\"123456789\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/users/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "users",
+                "login"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "login-user",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\":\"amr@test.com\",\r\n    \"password\":\"123456\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/users/login",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "users",
+                    "login"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "217"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"d9-Rbc8BEpco8ROS1NLA6FFoy3sf5c\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 04 Jun 2026 10:04:11 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"login successful\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTIxNGNhN2NiYjI0NjE1ZmM2NWI5ZjQiLCJpYXQiOjE3ODA1Njc0NTEsImV4cCI6MTc4MDU3MTA1MX0.2Vtd1nxunVOSCIBt6-GqOEQPxkfF4hfNwAStJ0JyIAc\"\n}"
+            },
+            {
+              "name": "login-user",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\":\"amr@test.com\",\r\n    \"password\":\"123456\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/users/login",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "users",
+                    "login"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "217"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"d9-8/7BmA6oZFGNhBNS+iSAW/YOoyY\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 04 Jun 2026 11:52:20 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"login successful\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTIxNGNhN2NiYjI0NjE1ZmM2NWI5ZjQiLCJpYXQiOjE3ODA1NzM5NDAsImV4cCI6MTc4MDU4NDc0MH0.hBeansDqmiw-3fl6NFb11JNVHq-Kn53kNs9dMQxn_74\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "update-user",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTIxNGNhN2NiYjI0NjE1ZmM2NWI5ZjQiLCJpYXQiOjE3ODA1NzM5NDAsImV4cCI6MTc4MDU4NDc0MH0.hBeansDqmiw-3fl6NFb11JNVHq-Kn53kNs9dMQxn_74",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"Kilany\",\r\n    \"email\":\"amr@test.com\",\r\n    \"phone\":\"11111111111\",\r\n    \"age\":\"22\"\r\n\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/users",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "users"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "update-user",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTIxNGNhN2NiYjI0NjE1ZmM2NWI5ZjQiLCJpYXQiOjE3ODA1NzM5NDAsImV4cCI6MTc4MDU4NDc0MH0.hBeansDqmiw-3fl6NFb11JNVHq-Kn53kNs9dMQxn_74",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\":\"Kilany\",\r\n    \"email\":\"amr@test.com\",\r\n    \"phone\":\"11111111111\",\r\n    \"age\":\"22\"\r\n\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/users",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "users"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "338"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"152-BOXv5ys3tSb6GpzCjACXXyfRjOM\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 04 Jun 2026 11:53:48 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"User updated\",\n    \"updatedUser\": {\n        \"_id\": \"6a214ca7cbb24615fc65b9f4\",\n        \"name\": \"Kilany\",\n        \"email\": \"amr@test.com\",\n        \"password\": \"$2b$08$NOnF2orN0A/rYJMhIKvn.uvQ.fBQYVQAXeMWjh3FMIzXvwywzsIWm\",\n        \"phone\": \"U2FsdGVkX1/uZGT2CFkKZ5VLoWvBUX/Aelc1DNrlaf0=\",\n        \"age\": 22,\n        \"createdAt\": \"2026-06-04T10:00:08.003Z\",\n        \"updatedAt\": \"2026-06-04T11:53:48.495Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "delete-user",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTIxNjA5MDUyN2ZiZGI4NDJlZmI3MzQiLCJpYXQiOjE3ODA1NzQyMTAsImV4cCI6MTc4MDU4NTAxMH0.Q6bn_vgMutzTtGSg5UehmSanMJQhc5d4lCIishcorGE",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3000/users",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "users"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "delete-user",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTIxNjA5MDUyN2ZiZGI4NDJlZmI3MzQiLCJpYXQiOjE3ODA1NzQyMTAsImV4cCI6MTc4MDU4NTAxMH0.Q6bn_vgMutzTtGSg5UehmSanMJQhc5d4lCIishcorGE",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "http://localhost:3000/users",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "users"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "26"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1a-+BFCXZBji7vrbkrwyE5s2YKViik\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 04 Jun 2026 11:57:35 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"User deleted\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "get-user-data",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTIxNGNhN2NiYjI0NjE1ZmM2NWI5ZjQiLCJpYXQiOjE3ODA1NzM5NDAsImV4cCI6MTc4MDU4NDc0MH0.hBeansDqmiw-3fl6NFb11JNVHq-Kn53kNs9dMQxn_74",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:3000/users",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "users"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "get-user-data",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTIxNGNhN2NiYjI0NjE1ZmM2NWI5ZjQiLCJpYXQiOjE3ODA1NzM5NDAsImV4cCI6MTc4MDU4NDc0MH0.hBeansDqmiw-3fl6NFb11JNVHq-Kn53kNs9dMQxn_74",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "http://localhost:3000/users",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "users"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "264"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"108-rB/OjTNN5mQqiiB8opcY1fmlc2o\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Thu, 04 Jun 2026 12:00:16 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"_id\": \"6a214ca7cbb24615fc65b9f4\",\n    \"name\": \"Kilany\",\n    \"email\": \"amr@test.com\",\n    \"password\": \"$2b$08$NOnF2orN0A/rYJMhIKvn.uvQ.fBQYVQAXeMWjh3FMIzXvwywzsIWm\",\n    \"phone\": \"11111111111\",\n    \"age\": 22,\n    \"createdAt\": \"2026-06-04T10:00:08.003Z\",\n    \"updatedAt\": \"2026-06-04T11:53:48.495Z\",\n    \"__v\": 0\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Notes",
+      "item": [
+        {
+          "name": "create-note",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTIxNjA5MDUyN2ZiZGI4NDJlZmI3MzMiLCJpYXQiOjE3ODA3NDUyODUsImV4cCI6MTc4MDc1NjA4NX0.NDRyHIaj5LvgBucinU25tUSWr20X-NkzOQp-MAKPgCg",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\":\"Note1\",\r\n    \"content\":\"this content for note1\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/notes",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "notes"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "create-note",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTIxNjA5MDUyN2ZiZGI4NDJlZmI3MzMiLCJpYXQiOjE3ODA3NDUyODUsImV4cCI6MTc4MDc1NjA4NX0.NDRyHIaj5LvgBucinU25tUSWr20X-NkzOQp-MAKPgCg",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"title\":\"Note1\",\r\n    \"content\":\"this content for note1\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/notes",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "notes"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "26"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1a-NR8eQyRC5tfY+SJ4Jj7XQhYZuFw\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 06 Jun 2026 11:28:30 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Note created\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "updateAllTitles",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTIxNjA5MDUyN2ZiZGI4NDJlZmI3MzMiLCJpYXQiOjE3ODA3NDUyODUsImV4cCI6MTc4MDc1NjA4NX0.NDRyHIaj5LvgBucinU25tUSWr20X-NkzOQp-MAKPgCg",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\":\"updated\",\r\n    \"content\":\"updated content for note1\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/notes/all",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "notes",
+                "all"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "updateAllTitles",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTIxNjA5MDUyN2ZiZGI4NDJlZmI3MzMiLCJpYXQiOjE3ODA3NDUyODUsImV4cCI6MTc4MDc1NjA4NX0.NDRyHIaj5LvgBucinU25tUSWr20X-NkzOQp-MAKPgCg",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"title\":\"updated\",\r\n    \"content\":\"updated content for note1\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/notes/all",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "notes",
+                    "all"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "31"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1f-9NHoMmjFGX2JOkSHebnJ8jnQbio\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 06 Jun 2026 11:44:57 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"All notes updated\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "updateSingleNote",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTIxNjA5MDUyN2ZiZGI4NDJlZmI3MzMiLCJpYXQiOjE3ODA3NDUyODUsImV4cCI6MTc4MDc1NjA4NX0.NDRyHIaj5LvgBucinU25tUSWr20X-NkzOQp-MAKPgCg",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\":\"updated note1\",\r\n    \"content\":\"updated content for note1\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/notes/6a24045d111046c62354adb5",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "notes",
+                "6a24045d111046c62354adb5"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "updateSingleNote",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [
+                  {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTIxNjA5MDUyN2ZiZGI4NDJlZmI3MzMiLCJpYXQiOjE3ODA3NDUyODUsImV4cCI6MTc4MDc1NjA4NX0.NDRyHIaj5LvgBucinU25tUSWr20X-NkzOQp-MAKPgCg",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"title\":\"updated note1\",\r\n    \"content\":\"updated content for note1\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/notes/6a24045d111046c62354adb5",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "notes",
+                    "6a24045d111046c62354adb5"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "247"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"f7-OVWWB9lt2/RF4PeukiH3gaB0V+4\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 06 Jun 2026 11:47:24 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"updated\",\n    \"note\": {\n        \"_id\": \"6a24045d111046c62354adb5\",\n        \"title\": \"updated note1\",\n        \"content\": \"updated content for note1\",\n        \"userId\": \"6a216090527fbdb842efb733\",\n        \"createdAt\": \"2026-06-06T11:28:30.137Z\",\n        \"updatedAt\": \"2026-06-06T11:47:24.751Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "replaceNote",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTIxNjA5MDUyN2ZiZGI4NDJlZmI3MzMiLCJpYXQiOjE3ODA3NDUyODUsImV4cCI6MTc4MDc1NjA4NX0.NDRyHIaj5LvgBucinU25tUSWr20X-NkzOQp-MAKPgCg",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\":\"replace note1\",\r\n    \"content\":\"replace content for note1\"\r\n}\r\n    ",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/notes/replace/6a24045d111046c62354adb5",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "notes",
+                "replace",
+                "6a24045d111046c62354adb5"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "replaceNote",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTIxNjA5MDUyN2ZiZGI4NDJlZmI3MzMiLCJpYXQiOjE3ODA3NDUyODUsImV4cCI6MTc4MDc1NjA4NX0.NDRyHIaj5LvgBucinU25tUSWr20X-NkzOQp-MAKPgCg",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"title\":\"replace note1\",\r\n    \"content\":\"replace content for note1\"\r\n}\r\n    ",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/notes/replace/6a24045d111046c62354adb5",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "notes",
+                    "replace",
+                    "6a24045d111046c62354adb5"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "240"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"f0-64nkPcOPHS/nQ9v5sCi0xqaLJsI\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 06 Jun 2026 11:59:00 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"replaced\",\n    \"note\": {\n        \"_id\": \"6a24045d111046c62354adb5\",\n        \"title\": \"replace note1\",\n        \"content\": \"replace content for note1\",\n        \"userId\": \"6a216090527fbdb842efb733\",\n        \"createdAt\": \"2026-06-06T11:59:00.305Z\",\n        \"updatedAt\": \"2026-06-06T11:59:00.305Z\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "deleteAllNotes",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTIxNjA5MDUyN2ZiZGI4NDJlZmI3MzMiLCJpYXQiOjE3ODA3NDUyODUsImV4cCI6MTc4MDc1NjA4NX0.NDRyHIaj5LvgBucinU25tUSWr20X-NkzOQp-MAKPgCg",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/notes/all",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "notes",
+                "all"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "deleteAllNotes",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTIxNjA5MDUyN2ZiZGI4NDJlZmI3MzMiLCJpYXQiOjE3ODA3NDUyODUsImV4cCI6MTc4MDc1NjA4NX0.NDRyHIaj5LvgBucinU25tUSWr20X-NkzOQp-MAKPgCg",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/notes/all",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "notes",
+                    "all"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "36"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"24-HVp/qJwDvY/8zmaDnRJzJV8PxRY\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 06 Jun 2026 12:00:33 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Deleted all user notes\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "deleteSingleNote",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTIxNjA5MDUyN2ZiZGI4NDJlZmI3MzMiLCJpYXQiOjE3ODA3NDUyODUsImV4cCI6MTc4MDc1NjA4NX0.NDRyHIaj5LvgBucinU25tUSWr20X-NkzOQp-MAKPgCg",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/notes/6a240c15111046c62354adb6",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "notes",
+                "6a240c15111046c62354adb6"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "deleteSingleNote",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTIxNjA5MDUyN2ZiZGI4NDJlZmI3MzMiLCJpYXQiOjE3ODA3NDUyODUsImV4cCI6MTc4MDc1NjA4NX0.NDRyHIaj5LvgBucinU25tUSWr20X-NkzOQp-MAKPgCg",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/notes/6a240c15111046c62354adb6",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "notes",
+                    "6a240c15111046c62354adb6"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "236"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"ec-NdkHhVIwY8lNzzxeVqFN5xp5Qbs\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 06 Jun 2026 12:02:58 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"deleted\",\n    \"note\": {\n        \"_id\": \"6a240c15111046c62354adb6\",\n        \"title\": \"Note1\",\n        \"content\": \"this content for note1\",\n        \"userId\": \"6a216090527fbdb842efb733\",\n        \"createdAt\": \"2026-06-06T12:01:25.965Z\",\n        \"updatedAt\": \"2026-06-06T12:02:47.075Z\",\n        \"__v\": 0\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "getPaginatedNotes",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTIxNjA5MDUyN2ZiZGI4NDJlZmI3MzMiLCJpYXQiOjE3ODA3NDUyODUsImV4cCI6MTc4MDc1NjA4NX0.NDRyHIaj5LvgBucinU25tUSWr20X-NkzOQp-MAKPgCg",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:3000/notes/paginate-sort?page=1&limit=2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "notes",
+                "paginate-sort"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "limit",
+                  "value": "2"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "getPaginatedNotes",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTIxNjA5MDUyN2ZiZGI4NDJlZmI3MzMiLCJpYXQiOjE3ODA3NDUyODUsImV4cCI6MTc4MDc1NjA4NX0.NDRyHIaj5LvgBucinU25tUSWr20X-NkzOQp-MAKPgCg",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "http://localhost:3000/notes/paginate-sort?page=1&limit=2",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "notes",
+                    "paginate-sort"
+                  ],
+                  "query": [
+                    {
+                      "key": "page",
+                      "value": "1"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "2"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "417"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"1a1-JdXIuaULJ5r2eu1yhliI1St7M+4\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 06 Jun 2026 12:13:53 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"_id\": \"6a240e85111046c62354adc4\",\n        \"title\": \"Note1\",\n        \"content\": \"this content for note1\",\n        \"userId\": \"6a216090527fbdb842efb733\",\n        \"createdAt\": \"2026-06-06T12:11:49.960Z\",\n        \"updatedAt\": \"2026-06-06T12:11:49.960Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6a240e85111046c62354adc3\",\n        \"title\": \"Note1\",\n        \"content\": \"this content for note1\",\n        \"userId\": \"6a216090527fbdb842efb733\",\n        \"createdAt\": \"2026-06-06T12:11:49.150Z\",\n        \"updatedAt\": \"2026-06-06T12:11:49.150Z\",\n        \"__v\": 0\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "note-by-content",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTIxNjA5MDUyN2ZiZGI4NDJlZmI3MzMiLCJpYXQiOjE3ODA3NDUyODUsImV4cCI6MTc4MDc1NjA4NX0.NDRyHIaj5LvgBucinU25tUSWr20X-NkzOQp-MAKPgCg",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/notes/note-by-content?content=Workout Plan",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "notes",
+                "note-by-content"
+              ],
+              "query": [
+                {
+                  "key": "content",
+                  "value": "Workout Plan"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "note-by-content",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTIxNjA5MDUyN2ZiZGI4NDJlZmI3MzMiLCJpYXQiOjE3ODA3NDUyODUsImV4cCI6MTc4MDc1NjA4NX0.NDRyHIaj5LvgBucinU25tUSWr20X-NkzOQp-MAKPgCg",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/notes/note-by-content?content=Workout Plan",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "notes",
+                    "note-by-content"
+                  ],
+                  "query": [
+                    {
+                      "key": "content",
+                      "value": "Workout Plan"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "197"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"c5-3klok5pBn6j19IzIfgWxfYtafdA\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 06 Jun 2026 12:17:46 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"_id\": \"6a240e7c111046c62354adb8\",\n    \"title\": \"Note1\",\n    \"content\": \"Workout Plan\",\n    \"userId\": \"6a216090527fbdb842efb733\",\n    \"createdAt\": \"2026-06-06T12:11:40.656Z\",\n    \"updatedAt\": \"2026-06-06T12:11:40.656Z\",\n    \"__v\": 0\n}"
+            }
+          ]
+        },
+        {
+          "name": "note-with-user",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTIxNjA5MDUyN2ZiZGI4NDJlZmI3MzMiLCJpYXQiOjE3ODA3NDUyODUsImV4cCI6MTc4MDc1NjA4NX0.NDRyHIaj5LvgBucinU25tUSWr20X-NkzOQp-MAKPgCg",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/notes/note-with-user",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "notes",
+                "note-with-user"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "note-with-user",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTIxNjA5MDUyN2ZiZGI4NDJlZmI3MzMiLCJpYXQiOjE3ODA3NDUyODUsImV4cCI6MTc4MDc1NjA4NX0.NDRyHIaj5LvgBucinU25tUSWr20X-NkzOQp-MAKPgCg",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/notes/note-with-user",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "notes",
+                    "note-with-user"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "1765"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"6e5-fe4dXY5hf+3SIKIaf4SrpYte4V4\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 06 Jun 2026 12:21:44 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"_id\": \"6a240e7b111046c62354adb7\",\n        \"title\": \"Note1\",\n        \"userId\": {\n            \"email\": \"Ahmed@test.com\"\n        },\n        \"createdAt\": \"2026-06-06T12:11:39.452Z\"\n    },\n    {\n        \"_id\": \"6a240e7c111046c62354adb8\",\n        \"title\": \"Note1\",\n        \"userId\": {\n            \"email\": \"Ahmed@test.com\"\n        },\n        \"createdAt\": \"2026-06-06T12:11:40.656Z\"\n    },\n    {\n        \"_id\": \"6a240e7d111046c62354adb9\",\n        \"title\": \"Note1\",\n        \"userId\": {\n            \"email\": \"Ahmed@test.com\"\n        },\n        \"createdAt\": \"2026-06-06T12:11:41.563Z\"\n    },\n    {\n        \"_id\": \"6a240e7e111046c62354adba\",\n        \"title\": \"Note1\",\n        \"userId\": {\n            \"email\": \"Ahmed@test.com\"\n        },\n        \"createdAt\": \"2026-06-06T12:11:42.405Z\"\n    },\n    {\n        \"_id\": \"6a240e7f111046c62354adbb\",\n        \"title\": \"Note1\",\n        \"userId\": {\n            \"email\": \"Ahmed@test.com\"\n        },\n        \"createdAt\": \"2026-06-06T12:11:43.310Z\"\n    },\n    {\n        \"_id\": \"6a240e80111046c62354adbc\",\n        \"title\": \"Note1\",\n        \"userId\": {\n            \"email\": \"Ahmed@test.com\"\n        },\n        \"createdAt\": \"2026-06-06T12:11:44.062Z\"\n    },\n    {\n        \"_id\": \"6a240e80111046c62354adbd\",\n        \"title\": \"Note1\",\n        \"userId\": {\n            \"email\": \"Ahmed@test.com\"\n        },\n        \"createdAt\": \"2026-06-06T12:11:44.750Z\"\n    },\n    {\n        \"_id\": \"6a240e81111046c62354adbe\",\n        \"title\": \"Note1\",\n        \"userId\": {\n            \"email\": \"Ahmed@test.com\"\n        },\n        \"createdAt\": \"2026-06-06T12:11:45.524Z\"\n    },\n    {\n        \"_id\": \"6a240e82111046c62354adbf\",\n        \"title\": \"Note1\",\n        \"userId\": {\n            \"email\": \"Ahmed@test.com\"\n        },\n        \"createdAt\": \"2026-06-06T12:11:46.212Z\"\n    },\n    {\n        \"_id\": \"6a240e82111046c62354adc0\",\n        \"title\": \"Note1\",\n        \"userId\": {\n            \"email\": \"Ahmed@test.com\"\n        },\n        \"createdAt\": \"2026-06-06T12:11:46.939Z\"\n    },\n    {\n        \"_id\": \"6a240e83111046c62354adc1\",\n        \"title\": \"Note1\",\n        \"userId\": {\n            \"email\": \"Ahmed@test.com\"\n        },\n        \"createdAt\": \"2026-06-06T12:11:47.649Z\"\n    },\n    {\n        \"_id\": \"6a240e84111046c62354adc2\",\n        \"title\": \"Note1\",\n        \"userId\": {\n            \"email\": \"Ahmed@test.com\"\n        },\n        \"createdAt\": \"2026-06-06T12:11:48.405Z\"\n    },\n    {\n        \"_id\": \"6a240e85111046c62354adc3\",\n        \"title\": \"Note1\",\n        \"userId\": {\n            \"email\": \"Ahmed@test.com\"\n        },\n        \"createdAt\": \"2026-06-06T12:11:49.150Z\"\n    },\n    {\n        \"_id\": \"6a240e85111046c62354adc4\",\n        \"title\": \"Note1\",\n        \"userId\": {\n            \"email\": \"Ahmed@test.com\"\n        },\n        \"createdAt\": \"2026-06-06T12:11:49.960Z\"\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "getNotesAggregate",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTIxNjA5MDUyN2ZiZGI4NDJlZmI3MzMiLCJpYXQiOjE3ODA3NDUyODUsImV4cCI6MTc4MDc1NjA4NX0.NDRyHIaj5LvgBucinU25tUSWr20X-NkzOQp-MAKPgCg",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/notes/aggregate?title=nOtE",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "notes",
+                "aggregate"
+              ],
+              "query": [
+                {
+                  "key": "title",
+                  "value": "nOtE"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "getNotesAggregate",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTIxNjA5MDUyN2ZiZGI4NDJlZmI3MzMiLCJpYXQiOjE3ODA3NDUyODUsImV4cCI6MTc4MDc1NjA4NX0.NDRyHIaj5LvgBucinU25tUSWr20X-NkzOQp-MAKPgCg",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/notes/aggregate?title=nOtE",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "notes",
+                    "aggregate"
+                  ],
+                  "query": [
+                    {
+                      "key": "title",
+                      "value": "nOtE"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "1881"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"759-02fTiWDxI36B1ERvHf2r0ZgUObw\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 06 Jun 2026 12:35:42 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"_id\": \"6a240e7b111046c62354adb7\",\n        \"title\": \"Note1\",\n        \"content\": \"this content for note1\",\n        \"user\": {\n            \"name\": \"Ahmed\",\n            \"email\": \"Ahmed@test.com\"\n        }\n    },\n    {\n        \"_id\": \"6a240e7c111046c62354adb8\",\n        \"title\": \"Note1\",\n        \"content\": \"Workout Plan\",\n        \"user\": {\n            \"name\": \"Ahmed\",\n            \"email\": \"Ahmed@test.com\"\n        }\n    },\n    {\n        \"_id\": \"6a240e7d111046c62354adb9\",\n        \"title\": \"Note1\",\n        \"content\": \"this content for note1\",\n        \"user\": {\n            \"name\": \"Ahmed\",\n            \"email\": \"Ahmed@test.com\"\n        }\n    },\n    {\n        \"_id\": \"6a240e7e111046c62354adba\",\n        \"title\": \"Note1\",\n        \"content\": \"this content for note1\",\n        \"user\": {\n            \"name\": \"Ahmed\",\n            \"email\": \"Ahmed@test.com\"\n        }\n    },\n    {\n        \"_id\": \"6a240e7f111046c62354adbb\",\n        \"title\": \"Note1\",\n        \"content\": \"this content for note1\",\n        \"user\": {\n            \"name\": \"Ahmed\",\n            \"email\": \"Ahmed@test.com\"\n        }\n    },\n    {\n        \"_id\": \"6a240e80111046c62354adbc\",\n        \"title\": \"Note1\",\n        \"content\": \"this content for note1\",\n        \"user\": {\n            \"name\": \"Ahmed\",\n            \"email\": \"Ahmed@test.com\"\n        }\n    },\n    {\n        \"_id\": \"6a240e80111046c62354adbd\",\n        \"title\": \"Note1\",\n        \"content\": \"this content for note1\",\n        \"user\": {\n            \"name\": \"Ahmed\",\n            \"email\": \"Ahmed@test.com\"\n        }\n    },\n    {\n        \"_id\": \"6a240e81111046c62354adbe\",\n        \"title\": \"Note1\",\n        \"content\": \"this content for note1\",\n        \"user\": {\n            \"name\": \"Ahmed\",\n            \"email\": \"Ahmed@test.com\"\n        }\n    },\n    {\n        \"_id\": \"6a240e82111046c62354adbf\",\n        \"title\": \"Note1\",\n        \"content\": \"this content for note1\",\n        \"user\": {\n            \"name\": \"Ahmed\",\n            \"email\": \"Ahmed@test.com\"\n        }\n    },\n    {\n        \"_id\": \"6a240e82111046c62354adc0\",\n        \"title\": \"Note1\",\n        \"content\": \"this content for note1\",\n        \"user\": {\n            \"name\": \"Ahmed\",\n            \"email\": \"Ahmed@test.com\"\n        }\n    },\n    {\n        \"_id\": \"6a240e83111046c62354adc1\",\n        \"title\": \"Note1\",\n        \"content\": \"this content for note1\",\n        \"user\": {\n            \"name\": \"Ahmed\",\n            \"email\": \"Ahmed@test.com\"\n        }\n    },\n    {\n        \"_id\": \"6a240e84111046c62354adc2\",\n        \"title\": \"Note1\",\n        \"content\": \"this content for note1\",\n        \"user\": {\n            \"name\": \"Ahmed\",\n            \"email\": \"Ahmed@test.com\"\n        }\n    },\n    {\n        \"_id\": \"6a240e85111046c62354adc3\",\n        \"title\": \"Note1\",\n        \"content\": \"this content for note1\",\n        \"user\": {\n            \"name\": \"Ahmed\",\n            \"email\": \"Ahmed@test.com\"\n        }\n    },\n    {\n        \"_id\": \"6a240e85111046c62354adc4\",\n        \"title\": \"Note1\",\n        \"content\": \"this content for note1\",\n        \"user\": {\n            \"name\": \"Ahmed\",\n            \"email\": \"Ahmed@test.com\"\n        }\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "getNoteById",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "token",
+                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTIxNjA5MDUyN2ZiZGI4NDJlZmI3MzMiLCJpYXQiOjE3ODA3NDUyODUsImV4cCI6MTc4MDc1NjA4NX0.NDRyHIaj5LvgBucinU25tUSWr20X-NkzOQp-MAKPgCg",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:3000/notes/6a240e7c111046c62354adb8",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "notes",
+                "6a240e7c111046c62354adb8"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "getNoteById",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "token",
+                    "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2YTIxNjA5MDUyN2ZiZGI4NDJlZmI3MzMiLCJpYXQiOjE3ODA3NDUyODUsImV4cCI6MTc4MDc1NjA4NX0.NDRyHIaj5LvgBucinU25tUSWr20X-NkzOQp-MAKPgCg",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": ""
+                },
+                "url": {
+                  "raw": "http://localhost:3000/notes/6a240e7c111046c62354adb8",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "notes",
+                    "6a240e7c111046c62354adb8"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "197"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"c5-3klok5pBn6j19IzIfgWxfYtafdA\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sat, 06 Jun 2026 12:38:21 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"_id\": \"6a240e7c111046c62354adb8\",\n    \"title\": \"Note1\",\n    \"content\": \"Workout Plan\",\n    \"userId\": \"6a216090527fbdb842efb733\",\n    \"createdAt\": \"2026-06-06T12:11:40.656Z\",\n    \"updatedAt\": \"2026-06-06T12:11:40.656Z\",\n    \"__v\": 0\n}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1660 @@
+{
+  "info": {
+    "_postman_id": "ad833bc2-8df5-43c2-befa-184ea4bd5a65",
+    "name": "Assignment-8-route",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53487454",
+    "_collection_link": "https://go.postman.co/collection/53487454-ad833bc2-8df5-43c2-befa-184ea4bd5a65?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Assignment-8-route",
+      "item": [
+        {
+          "name": "1. Create Books Collection",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/collection/books",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "collection",
+                "books"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "1. Create Books Collection",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/collection/books",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "collection",
+                    "books"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "8"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"8-Nv24HbD1i+MHVjOdNPLzttklKUw\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 24 May 2026 10:01:21 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"ok\": 1\n}"
+            }
+          ]
+        },
+        {
+          "name": "3. Create Capped Logs",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/collection/logs/capped",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "collection",
+                "logs",
+                "capped"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "3. Create Capped Logs",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/collection/logs/capped",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "collection",
+                    "logs",
+                    "capped"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "8"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"8-Nv24HbD1i+MHVjOdNPLzttklKUw\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 24 May 2026 09:59:53 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"ok\": 1\n}"
+            }
+          ]
+        },
+        {
+          "name": "6. Insert Batch Books",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "[\r\n  { \"title\": \"Future\", \"author\": \"George Orwell\", \"year\": 2020, \"genres\": [\"Science Fiction\"] },\r\n  { \"title\": \"To Kill a Mockingbird\", \"author\": \"Harper Lee\", \"year\": 1960, \"genres\": [\"Classic\", \"Fiction\"] },\r\n  { \"title\": \"Brave New World\", \"author\": \"Aldous Huxley\", \"year\": 2006, \"genres\": [\"Dystopian\", \"Science Fiction\"] }\r\n]",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/books/batch",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "books",
+                "batch"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "6. Insert Batch Books",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "[\r\n  { \"title\": \"Future\", \"author\": \"George Orwell\", \"year\": 2020, \"genres\": [\"Science Fiction\"] },\r\n  { \"title\": \"To Kill a Mockingbird\", \"author\": \"Harper Lee\", \"year\": 1960, \"genres\": [\"Classic\", \"Fiction\"] },\r\n  { \"title\": \"Brave New World\", \"author\": \"Aldous Huxley\", \"year\": 2006, \"genres\": [\"Dystopian\", \"Science Fiction\"] }\r\n]",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/books/batch",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "books",
+                    "batch"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "148"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"94-5rG420A5/vYL+rwTIjLyDkLwqUM\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 24 May 2026 09:57:53 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"acknowledged\": true,\n    \"insertedCount\": 3,\n    \"insertedIds\": {\n        \"0\": \"6a12cba12f5e8c6a9a615b84\",\n        \"1\": \"6a12cba12f5e8c6a9a615b85\",\n        \"2\": \"6a12cba12f5e8c6a9a615b86\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Prove the Validation Works",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"author\": \"Anonymous\",\r\n  \"year\": 1999\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/books",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "books"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Prove the Validation Works",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"author\": \"Anonymous\",\r\n  \"year\": 1999\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/books",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "books"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "77"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"4d-nzdvhz+Baryd+Oh/Y9PDyg2N8mg\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 24 May 2026 09:48:15 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Document failed validation\",\n    \"error\": \"Document failed validation\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "2. Create Implicit Authors Collection",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \"name\": \"Author1\", \"nationality\": \"British\" }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/collection/authors",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "collection",
+                "authors"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "2. Create Implicit Authors Collection",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{ \"name\": \"Author1\", \"nationality\": \"British\" }",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/collection/authors",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "collection",
+                    "authors"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "61"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"3d-8FDgfwf/90y15NxK8MLTLRHaIO8\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 24 May 2026 09:59:31 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"acknowledged\": true,\n    \"insertedId\": \"6a12cc032f5e8c6a9a615b87\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "4. Create Title Index",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/collection/books/index",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "collection",
+                "books",
+                "index"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "4. Create Title Index",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/collection/books/index",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "collection",
+                    "books",
+                    "index"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "40"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"28-9vWTo9KTUZD/MMRnEthhcMPEd/s\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 24 May 2026 09:47:21 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"title_1\": \"Index created successfully\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "5. Insert One Book",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Book1\",\r\n  \"author\": \"Ali\",\r\n  \"year\": 1937,\r\n  \"genres\": [\"Fantasy\", \"Adventure\"]\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/books",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "books"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "5. Insert One Book",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"title\": \"Book1\",\r\n  \"author\": \"Ali\",\r\n  \"year\": 1937,\r\n  \"genres\": [\"Fantasy\", \"Adventure\"]\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/books",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "books"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "61"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"3d-nGZy3JXKHEk/tGSHHYTFlswjuzw\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 24 May 2026 09:47:13 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"acknowledged\": true,\n    \"insertedId\": \"6a12c9212f5e8c6a9a615b82\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "7. Insert a Log",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"book_id\": \"6a1139615395be8634337bdc\", \r\n  \"action\": \"borrowed\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/logs",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "logs"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "7. Insert a Log",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"book_id\": \"6a1139615395be8634337bdc\", \r\n  \"action\": \"borrowed\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "http://localhost:3000/logs",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "logs"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "61"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"3d-I80RycN76ieJWCwFlEe4TZbW7UY\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 24 May 2026 09:46:53 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"acknowledged\": true,\n    \"insertedId\": \"6a12c90d2f5e8c6a9a615b81\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "8. Update Book Year",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/books/Future",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "books",
+                "Future"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "8. Update Book Year",
+              "originalRequest": {
+                "method": "PATCH",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/books/Future",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "books",
+                    "Future"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "56"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"38-koqcTGRKW6rsBJ19irIWlDwQJfo\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 24 May 2026 09:46:27 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"acknowledged\": true,\n    \"matchedCount\": 1,\n    \"modifiedCount\": 0\n}"
+            }
+          ]
+        },
+        {
+          "name": "9. Find Book by Title",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/books/title?title=Brave New World",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "books",
+                "title"
+              ],
+              "query": [
+                {
+                  "key": "title",
+                  "value": "Brave New World"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "9. Find Book by Title",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/books/title?title=Brave New World",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "books",
+                    "title"
+                  ],
+                  "query": [
+                    {
+                      "key": "title",
+                      "value": "Brave New World"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "138"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"8a-YPOuRlRAlLdxpP/wxXNy5XyP3O0\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 24 May 2026 09:46:20 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"_id\": \"6a1139615395be8634337bdc\",\n    \"title\": \"Brave New World\",\n    \"author\": \"Aldous Huxley\",\n    \"year\": 2006,\n    \"genres\": [\n        \"Dystopian\",\n        \"Science Fiction\"\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "10. Find Books by Year Range",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/books/year?from=1960&to=2010",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "books",
+                "year"
+              ],
+              "query": [
+                {
+                  "key": "from",
+                  "value": "1960"
+                },
+                {
+                  "key": "to",
+                  "value": "2010"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "10. Find Books by Year Range",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/books/year?from=1960&to=2010",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "books",
+                    "year"
+                  ],
+                  "query": [
+                    {
+                      "key": "from",
+                      "value": "1960"
+                    },
+                    {
+                      "key": "to",
+                      "value": "2010"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "140"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"8c-wU6R0tI0LosZWuQMOgNd3LKccqk\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 24 May 2026 09:46:16 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"_id\": \"6a1139615395be8634337bdc\",\n        \"title\": \"Brave New World\",\n        \"author\": \"Aldous Huxley\",\n        \"year\": 2006,\n        \"genres\": [\n            \"Dystopian\",\n            \"Science Fiction\"\n        ]\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "11. Find by Genre",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/books/genre?genre=Science Fiction",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "books",
+                "genre"
+              ],
+              "query": [
+                {
+                  "key": "genre",
+                  "value": "Science Fiction"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "11. Find by Genre",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/books/genre?genre=Science Fiction",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "books",
+                    "genre"
+                  ],
+                  "query": [
+                    {
+                      "key": "genre",
+                      "value": "Science Fiction"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "258"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"102-BlohTZANLb90d868ITmUQQ4ZSWc\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 24 May 2026 09:46:12 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"_id\": \"6a1139615395be8634337bda\",\n        \"title\": \"Future\",\n        \"author\": \"George Orwell\",\n        \"year\": 2022,\n        \"genres\": [\n            \"Science Fiction\"\n        ]\n    },\n    {\n        \"_id\": \"6a1139615395be8634337bdc\",\n        \"title\": \"Brave New World\",\n        \"author\": \"Aldous Huxley\",\n        \"year\": 2006,\n        \"genres\": [\n            \"Dystopian\",\n            \"Science Fiction\"\n        ]\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "12. Pagination / Skip & Limit",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/books/skip-limit",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "books",
+                "skip-limit"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "12. Pagination / Skip & Limit",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/books/skip-limit",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "books",
+                    "skip-limit"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "411"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"19b-9m0FJdjkDhKnVjwkHJh0/huC5CM\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 24 May 2026 09:58:23 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"_id\": \"6a12cba12f5e8c6a9a615b86\",\n        \"title\": \"Brave New World\",\n        \"author\": \"Aldous Huxley\",\n        \"year\": 2006,\n        \"genres\": [\n            \"Dystopian\",\n            \"Science Fiction\"\n        ]\n    },\n    {\n        \"_id\": \"6a1139615395be8634337bdc\",\n        \"title\": \"Brave New World\",\n        \"author\": \"Aldous Huxley\",\n        \"year\": 2006,\n        \"genres\": [\n            \"Dystopian\",\n            \"Science Fiction\"\n        ]\n    },\n    {\n        \"_id\": \"6a12cba12f5e8c6a9a615b85\",\n        \"title\": \"To Kill a Mockingbird\",\n        \"author\": \"Harper Lee\",\n        \"year\": 1960,\n        \"genres\": [\n            \"Classic\",\n            \"Fiction\"\n        ]\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "13. Find Year as Integer",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/books/year-integer",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "books",
+                "year-integer"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "13. Find Year as Integer",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/books/year-integer",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "books",
+                    "year-integer"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "258"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"102-BlohTZANLb90d868ITmUQQ4ZSWc\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 24 May 2026 09:46:03 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"_id\": \"6a1139615395be8634337bda\",\n        \"title\": \"Future\",\n        \"author\": \"George Orwell\",\n        \"year\": 2022,\n        \"genres\": [\n            \"Science Fiction\"\n        ]\n    },\n    {\n        \"_id\": \"6a1139615395be8634337bdc\",\n        \"title\": \"Brave New World\",\n        \"author\": \"Aldous Huxley\",\n        \"year\": 2006,\n        \"genres\": [\n            \"Dystopian\",\n            \"Science Fiction\"\n        ]\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "14. Exclude Genres",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/books/exclude-genres",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "books",
+                "exclude-genres"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "14. Exclude Genres",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/books/exclude-genres",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "books",
+                    "exclude-genres"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "244"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"f4-ARFPtNMTQ+g11q+gLfnwGJQfzaE\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 24 May 2026 09:58:04 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"_id\": \"6a12c9212f5e8c6a9a615b82\",\n        \"title\": \"Book1\",\n        \"author\": \"Ali\",\n        \"year\": 1937,\n        \"genres\": [\n            \"Fantasy\",\n            \"Adventure\"\n        ]\n    },\n    {\n        \"_id\": \"6a12cba12f5e8c6a9a615b85\",\n        \"title\": \"To Kill a Mockingbird\",\n        \"author\": \"Harper Lee\",\n        \"year\": 1960,\n        \"genres\": [\n            \"Classic\",\n            \"Fiction\"\n        ]\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "15. Delete all books published before 2000.",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/books/before-year?year=2000",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "books",
+                "before-year"
+              ],
+              "query": [
+                {
+                  "key": "year",
+                  "value": "2000"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "15. Delete all books published before 2000.",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/books/before-year?year=2000",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "books",
+                    "before-year"
+                  ],
+                  "query": [
+                    {
+                      "key": "year",
+                      "value": "2000"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "38"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"26-cNC5LnJlaAZUicKAN6xhqN0RI9I\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 24 May 2026 09:45:44 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"acknowledged\": true,\n    \"deletedCount\": 0\n}"
+            }
+          ]
+        },
+        {
+          "name": "16. Aggregate 1: Filter and Sort",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/books/aggregate1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "books",
+                "aggregate1"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "16. Aggregate 1: Filter and Sort",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/books/aggregate1",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "books",
+                    "aggregate1"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "258"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"102-BlohTZANLb90d868ITmUQQ4ZSWc\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 24 May 2026 09:45:29 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"_id\": \"6a1139615395be8634337bda\",\n        \"title\": \"Future\",\n        \"author\": \"George Orwell\",\n        \"year\": 2022,\n        \"genres\": [\n            \"Science Fiction\"\n        ]\n    },\n    {\n        \"_id\": \"6a1139615395be8634337bdc\",\n        \"title\": \"Brave New World\",\n        \"author\": \"Aldous Huxley\",\n        \"year\": 2006,\n        \"genres\": [\n            \"Dystopian\",\n            \"Science Fiction\"\n        ]\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "17. Aggregate 2: Project / Select Columns",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/books/aggregate2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "books",
+                "aggregate2"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "17. Aggregate 2: Project / Select Columns",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/books/aggregate2",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "books",
+                    "aggregate2"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "122"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"7a-5x2W+vfo1Q7l3tC1JHe0FHkfHo4\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 24 May 2026 09:45:27 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"title\": \"Future\",\n        \"author\": \"George Orwell\",\n        \"year\": 2022\n    },\n    {\n        \"title\": \"Brave New World\",\n        \"author\": \"Aldous Huxley\",\n        \"year\": 2006\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "18. Aggregate 3: Unwind Array",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/books/aggregate3",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "books",
+                "aggregate3"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "18. Aggregate 3: Unwind Array",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/books/aggregate3",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "books",
+                    "aggregate3"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "151"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"97-EyvKlDV9WyZohkcxoYtlEx+Mokc\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 24 May 2026 09:45:24 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"title\": \"Future\",\n        \"genres\": \"Science Fiction\"\n    },\n    {\n        \"title\": \"Brave New World\",\n        \"genres\": \"Dystopian\"\n    },\n    {\n        \"title\": \"Brave New World\",\n        \"genres\": \"Science Fiction\"\n    }\n]"
+            }
+          ]
+        },
+        {
+          "name": "19. Aggregate 4: Lookup",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/books/aggregate4",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "books",
+                "aggregate4"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "19. Aggregate 4: Lookup",
+              "originalRequest": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                  "raw": "http://localhost:3000/books/aggregate4",
+                  "protocol": "http",
+                  "host": [
+                    "localhost"
+                  ],
+                  "port": "3000",
+                  "path": [
+                    "books",
+                    "aggregate4"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "X-Powered-By",
+                  "value": "Express"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json; charset=utf-8"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "200"
+                },
+                {
+                  "key": "ETag",
+                  "value": "W/\"c8-R43jaHj9JgUAyAG4w52vLSb78ro\""
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 24 May 2026 09:45:17 GMT"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Keep-Alive",
+                  "value": "timeout=5"
+                }
+              ],
+              "cookie": [],
+              "body": "[\n    {\n        \"action\": \"borrowed\",\n        \"book_details\": [\n            {\n                \"title\": \"Future\",\n                \"author\": \"George Orwell\",\n                \"year\": 2022\n            }\n        ]\n    },\n    {\n        \"action\": \"borrowed\",\n        \"book_details\": [\n            {\n                \"title\": \"Brave New World\",\n                \"author\": \"Aldous Huxley\",\n                \"year\": 2006\n            }\n        ]\n    }\n]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
